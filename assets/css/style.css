@@ -1,0 +1,30 @@
+#background
+{ /* opening tag for background attributes */
+	background-image: url(https://image.freepik.com/free-psd/abstract-background-design_1297-82.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+}/* closing tag for background attributes */
+
+#box
+{
+	background-color: black;
+	color:white;
+	width: 50%;
+	height: 200px;
+	text-align: center;
+	margin:25%;
+	box-sizing: border-box;
+}
+
+#start
+{
+	width:25%;
+	padding: 20px;
+	font-size: 24px;
+	box-sizing: border-box;
+}
+
+.classNameMultipleChoice
+{
+	color:white;
+}

@@ -2,30 +2,12 @@
 
 $(document).ready(function(){
 
-// var q1 = "What is the capital of United States of America?";
-// var q2 = "Who is the current president of United States of America?";
-// var q3 = "Who directed Jaws?";
-// var q4 = "What year is the movie psycho released in?";
-// var q5 = "How many siblings does Michael Jackson have?";
+
 
 var rightAnswers = 0;
 var wrongAnswers = 0;
 //===============================================================================
-var secs = 10;
-var myVar = setInterval(function(){ 
-	$("#timer").html("<h1>" + '00 : ' + secs +  "</h1>");
 
-	if(secs<1){
-		//function clear interval
-		clearInterval(myVar);
-		//call gameOver function
-		$("#timer").html("<h1>" +'FINISH'+ "</h1>");
-		$("#box").html("<p>"+"<h1>" + "Correct Answers: " + rightAnswers + "</h1>"+"</p>"+"<h1>" + "Wrong Answers: " + wrongAnswers + "</h1>"+"</p>");
-		
-	}
-
-	secs--;
-}, 1000);
 //===============================================================================
 var multipleChoice = 
 [
@@ -57,26 +39,45 @@ var multipleChoice =
 
 ];
 //===============================================================================
+$("#start").on('click', function (){
 
+var secs = 10;
+var myVar = setInterval(function(){ 
+	$("#timer").html("<h1>" + '00 : ' + secs +  "</h1>");
+
+	if(secs<1){
+		//function clear interval
+		clearInterval(myVar);
+		//call gameOver function
+		$("#timer").html("<h1>" +'FINISH'+ "</h1>");
+		$("#box").html("<p>"+"<h1>" + "Correct Answers: " + rightAnswers + "</h1>"+"</p>"+"<h1>" + "Wrong Answers: " + wrongAnswers + "</h1>"+"</p>");
+		
+	}
+
+	secs--;
+}, 1000);
+
+console.log("I'm clicked");
 //===============================================================================
-
+//===============================================================================
 	for (var i = 0; i<multipleChoice.length; i++)
 {
 	console.log(multipleChoice[i].question);
 	$("#box").append("<div class = seperate >" + "<h3>" + multipleChoice[i].question + "</h3>" +"</div");
 
 	
-
+//===============================================================================
 
 	for(var j = 0; j<multipleChoice[i].choices.length; j++)
 	{
 
 
 		// $("#box").append("<input type = radio class = 'radioButton' ' value='" + multipleChoice[i].choices[j]+ "''>" + multipleChoice[i].choices[j] + "</input>");
-		$("#box").append("<input value = '"+ multipleChoice[i].choices[j] + "' type = 'radio' id = '"+ i + "' class = 'radioButton'>" + multipleChoice[i].choices[j] + "</input>");
+		$("#box").append("<input value = '"+ multipleChoice[i].choices[j] + "' type = 'radio' id = '"+ i + "' class = 'radioButton' name = 'question'>" + multipleChoice[i].choices[j] + "</input>");
 
 		
 	} 
+//===============================================================================
 	
 }
 $('.radioButton').on('click', function() {
@@ -93,6 +94,12 @@ $('.radioButton').on('click', function() {
 	}
 	
 });
+
+//===============================================================================
+//===============================================================================
+});
+
+
 
 
 

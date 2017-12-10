@@ -73,7 +73,8 @@ console.log("I'm clicked");
 
 
 		// $("#box").append("<input type = radio class = 'radioButton' ' value='" + multipleChoice[i].choices[j]+ "''>" + multipleChoice[i].choices[j] + "</input>");
-		$("#box").append("<input value = '"+ multipleChoice[i].choices[j] + "' type = 'radio' id = '"+ i + "' class = 'radioButton' name = 'question'>" + multipleChoice[i].choices[j] + "</input>");
+		// $("#box").append("<input value = '"+ multipleChoice[i].choices[j] + "' type = 'radio' id = '"+ i + "' class = 'radioButton' name = 'question-'"+ i +" >" + multipleChoice[i].choices[j] + "</input>");
+		$("#box").append("<input name='question-"+ i +"' value = '"+ multipleChoice[i].choices[j] + "' type = 'radio' id = '"+ i + "' class = 'radioButton'>" + multipleChoice[i].choices[j] + "</input>");
 
 		
 	} 
@@ -98,13 +99,6 @@ $('.radioButton').on('click', function() {
 //===============================================================================
 //===============================================================================
 });
-
-
-
-
-
-
-
 
 
 //===============================================================================

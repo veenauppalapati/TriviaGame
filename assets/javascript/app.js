@@ -11,7 +11,7 @@ $(document).ready(function(){
 var rightAnswers = 0;
 var wrongAnswers = 0;
 //===============================================================================
-var secs = 5;
+var secs = 10;
 var myVar = setInterval(function(){ 
 	$("#timer").html("<h1>" + '00 : ' + secs +  "</h1>");
 
@@ -20,7 +20,7 @@ var myVar = setInterval(function(){
 		clearInterval(myVar);
 		//call gameOver function
 		$("#timer").html("<h1>" +'FINISH'+ "</h1>");
-		$("#box").html("<p>" + "Correct Answers: " + rightAnswers + "</p>"+ "<p>" + "Wrong Answers: " + wrongAnswers + "</p>");
+		$("#box").html("<p>"+"<h1>" + "Correct Answers: " + rightAnswers + "</h1>"+"</p>"+"<h1>" + "Wrong Answers: " + wrongAnswers + "</h1>"+"</p>");
 		
 	}
 
@@ -31,16 +31,28 @@ var multipleChoice =
 [
 
 	{
-		question: "What is the capital of United States of America?",
-		choices:["a", "b", "c", "d"],
-		answer: "a"
+		question: "Grand Central Terminal, Park Avenue, New York is the world's",
+		choices:[" largest railway station ", " hightest railway station ", " longest railway station ", " None of the above "],
+		answer: " largest railway station "
 	},
 
 	{
-		question: "Who is the current president of United States of America?",
-		choices:["1", "2", "3", "4"],
-		answer: "4"
-	} 
+		question: "Entomology is the science that studies",
+		choices:["Behavior of human beings", "Insects", "The origin and history of technical and scientific terms", "The formation of rocks"],
+		answer: "Insects"
+	}, 
+
+	{
+		question: "Eritrea, which became the 182nd member of the UN in 1993, is in the continent of",
+		choices:["Asia", "Africa", "Europe", "Australia"],
+		answer: "Africa"
+	},
+
+	{
+		question: "Garampani sanctuary is located at",
+		choices:["Junagarh, Gujarat", "Diphu, Assama", "Kohima, Nagaland", "Gangtok, Sikkim"],
+		answer: "Diphu, Assama"
+	}  
 
 
 ];
@@ -48,12 +60,10 @@ var multipleChoice =
 
 //===============================================================================
 
-
-
-for (var i = 0; i<multipleChoice.length; i++)
+	for (var i = 0; i<multipleChoice.length; i++)
 {
 	console.log(multipleChoice[i].question);
-	$("#box").append("<div>" + multipleChoice[i].question + "</div");
+	$("#box").append("<div class = seperate >" + "<h3>" + multipleChoice[i].question + "</h3>" +"</div");
 
 	
 
@@ -83,6 +93,10 @@ $('.radioButton').on('click', function() {
 	}
 	
 });
+
+
+
+
 
 
 

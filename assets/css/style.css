@@ -10,10 +10,12 @@
 	background-color: black;
 	color:white;
 	width: 50%;
-	height: 200px;
+	
 	text-align: center;
 	margin:25%;
 	box-sizing: border-box;
+	padding:5%;
+
 }
 
 #start
@@ -27,4 +29,11 @@
 .classNameMultipleChoice
 {
 	color:white;
+}
+
+.seperate
+{
+	margin-top: 20px;
+	color:grey; 
+
 }
